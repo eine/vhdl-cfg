@@ -1,0 +1,6 @@
+work-obj08.cf
+*.asc
+*.bit
+*.config
+*.svf
+synth_out
