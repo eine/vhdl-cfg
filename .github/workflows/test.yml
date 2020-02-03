@@ -1,0 +1,43 @@
+name: 'test'
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '0 0 * * 5'
+
+jobs:
+
+  GHDLSynth:
+    runs-on: ubuntu-latest
+    steps:
+
+    - uses: actions/checkout@v2
+
+    - uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Install dependencies
+      run: |
+        pip install -U pip --progress-bar off
+        pip install -U vunit_hdl --progress-bar off
+
+    - name: Run 'GHDLSynth/run.py'
+      run: |
+        cd GHDLSynth
+        python run.py -v
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: GHDLSynth_out
+        path: synth_out
+
+  VUnit:
+    runs-on: ubuntu-latest
+    steps:
+
+    - uses: actions/checkout@v2
+
+    - name: VUnit 'demo'
+      run: docker run --rm -v $(pwd):/src -w /src -e CI ghdl/vunit:llvm python3 modules/demo/vunit/run.py -v
