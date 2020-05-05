@@ -13,20 +13,29 @@ This repository is a playground to explore and compare how configuration is hand
 
 ## Tools/Toolchains
 
-- GHDL + ghdlsynth-beta + Yosys + NextPNR + (icestorm | (trellis + openocd))
+- GHDL + ghdl-yosys-plugin + Yosys + NextPNR + (icestorm | (trellis + openocd))
   - Python Class `GHDLSynth`
 
 ### ToDo
 
-- VUnit + GHDL
-- tsfpga
-- cocotb
-- rust_hdl
-- pyVHDLParser
-- ghdl-ls
+- [GHDL](https://github.com/ghdl/ghdl)
+  - [ghdl-language-server](https://github.com/ghdl/ghdl-language-server)
+  - [ghdl-yosys-plugin](https://github.com/ghdl/ghdl-yosys-plugin)
+  - [ghdl-cosim](https://github.com/ghdl/ghdl-cosim)
+- [rust_hdl](https://github.com/kraigher/rust_hdl)
+- [VUnit](https://github.com/VUnit/vunit)
+- [cocotb](https://github.com/cocotb/cocotb)
+- [tsfpga](https://gitlab.com/truestream/tsfpga/tree/master)
+- [fusesoc](https://github.com/olofk/fusesoc)
+- [edalize](https://github.com/olofk/edalize)
+- [hdl-make](https://ohwr.org/projects/hdl-make)
+- [duh](https://github.com/sifive/duh)
+- [hdl-component-manager](https://github.com/jeremiah-c-leary/hdl-component-manager)
+- [pyVHDLParser](https://github.com/Paebbels/pyVHDLParser)
+- [SigasiProjectCreator](https://github.com/sigasi/SigasiProjectCreator)
 
 ## References
 
 - [antonblanchard/ghdl-yosys-blink](https://github.com/antonblanchard/ghdl-yosys-blink)
-- [tgingold/ghdlsynth-beta](https://github.com/tgingold/ghdlsynth-beta/tree/master/examples)
-- [ghdl/ghdl](https://github.com/ghdl/ghdl/tree/master/doc/examples/quick_start)
+- [fosshdl-dist](https://github.com/hipolitoguzman/fosshdl-dist/blob/master/Makefile)
+- [ZipCPU/autofpga](https://github.com/ZipCPU/autofpga)
