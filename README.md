@@ -27,7 +27,7 @@ This repository is a playground to explore and compare how configuration is hand
 - [cocotb](https://github.com/cocotb/cocotb)
 - [tsfpga](https://gitlab.com/truestream/tsfpga/tree/master)
 - [pyFPGA](https://gitlab.com/rodrigomelo9/pyfpga)
-- [fusesoc](https://github.com/olofk/fusesoc)
+- [fusesoc](https://github.com/olofk/fusesoc) | [FuseSoc Verification Automation](https://github.com/m-kru/fsva)
 - [edalize](https://github.com/olofk/edalize)
 - [hdl-make](https://ohwr.org/projects/hdl-make)
 - [duh](https://github.com/sifive/duh)
