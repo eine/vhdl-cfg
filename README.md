@@ -26,6 +26,7 @@ This repository is a playground to explore and compare how configuration is hand
 - [VUnit](https://github.com/VUnit/vunit)
 - [cocotb](https://github.com/cocotb/cocotb)
 - [tsfpga](https://gitlab.com/truestream/tsfpga/tree/master)
+- [pyFPGA](https://gitlab.com/rodrigomelo9/pyfpga)
 - [fusesoc](https://github.com/olofk/fusesoc)
 - [edalize](https://github.com/olofk/edalize)
 - [hdl-make](https://ohwr.org/projects/hdl-make)
