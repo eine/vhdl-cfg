@@ -1,6 +1,9 @@
-work-obj08.cf
+__pycache__/
 *.asc
 *.bit
 *.config
 *.svf
 synth_out
+vunit_out/
+work-obj93.cf
+work-obj08.cf
