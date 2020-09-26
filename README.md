@@ -26,6 +26,9 @@ This repository is a playground for exploring and comparing how configuration is
 - [VUnit](https://github.com/VUnit/vunit)
   - Used: `demo`
   - ToDo: `leds`, `full_adder`, `uart`
+- [pyFPGA](https://gitlab.com/rodrigomelo9/pyfpga)
+  - Used: `demo`
+  - ToDO: `leds`, `full_adder`, `uart`
 
 ### ToDo
 
@@ -36,7 +39,6 @@ This repository is a playground for exploring and comparing how configuration is
 - [rust_hdl](https://github.com/kraigher/rust_hdl)
 - [cocotb](https://github.com/cocotb/cocotb)
 - [tsfpga](https://gitlab.com/truestream/tsfpga/tree/master)
-- [pyFPGA](https://gitlab.com/rodrigomelo9/pyfpga)
 - [fusesoc](https://github.com/olofk/fusesoc) | [FuseSoc Verification Automation](https://github.com/m-kru/fsva)
 - [edalize](https://github.com/olofk/edalize)
 - [hdl-make](https://ohwr.org/projects/hdl-make)
