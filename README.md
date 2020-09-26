@@ -1,6 +1,15 @@
 # VHDL project configuration
 
-This repository is a playground to explore and compare how configuration is handled by different tools for development of VHDL projects.
+This repository is a playground for exploring and comparing how configuration is handled by different tools for development of (V)HDL projects. The main motivation is hopefully finding a universal format/procedure for reducing duplication. The repository is organised as follows:
+
+- `impl`: board constaint files (`*.lpf`, `*.pcf`, etc.), which can be reused by multiple designs.
+- `prog`: each subdir contains helper resources for a different programming tool, which can be reused by multiple designs.
+- `modules`: each subdir contains a different design and the corresponding specific sources for each of the tested tools.
+  - `demo`: basic design with a counter for making a LED blink and an UART loopback (hard-wire), based on [antonblanchard/ghdl-yosys-blink: vhdl_blink.vhdl](https://github.com/antonblanchard/ghdl-yosys-blink).
+  - `leds`: single entity and multiple architectures for generating patterns with 5 LEDs, based on [ghdl/ghdl-yosys-plugin: examples/icestick/leds](https://github.com/ghdl/ghdl-yosys-plugin/tree/master/examples/icestick/leds).
+  - `full_adder`: full adder example from GHDL's [Quick Start Guide](https://ghdl.github.io/ghdl/quick_start/README.html) ([*Full adder* module and testbench](https://ghdl.github.io/ghdl/quick_start/adder/README.html))
+  - `uart`: UART sender and receiver, based on [ghdl/ghdl-yosys-plugin: examples/icestick/uart](https://github.com/ghdl/ghdl-yosys-plugin/tree/master/examples/icestick/uart).
+- `GHDLSynth`: naive adaptation of the Makefiles from [ghdl/ghdl-yosys-plugin](https://github.com/ghdl/ghdl-yosys-plugin) to a Python class.
 
 ## Target boards and compatible/tested modules
 
@@ -13,8 +22,10 @@ This repository is a playground to explore and compare how configuration is hand
 
 ## Tools/Toolchains
 
-- GHDL + ghdl-yosys-plugin + Yosys + NextPNR + (icestorm | (trellis + openocd))
-  - Python Class `GHDLSynth`
+- [`GHDLSynth`](GHDLSynth/) Python class (GHDL + ghdl-yosys-plugin + Yosys + NextPNR + [icestorm | [trellis + openocd]]) (*natively*, with Docker or Podman)
+- [VUnit](https://github.com/VUnit/vunit)
+  - Used: `demo`
+  - ToDo: `leds`, `full_adder`, `uart`
 
 ### ToDo
 
@@ -23,7 +34,6 @@ This repository is a playground to explore and compare how configuration is hand
   - [ghdl-yosys-plugin](https://github.com/ghdl/ghdl-yosys-plugin)
   - [ghdl-cosim](https://github.com/ghdl/ghdl-cosim)
 - [rust_hdl](https://github.com/kraigher/rust_hdl)
-- [VUnit](https://github.com/VUnit/vunit)
 - [cocotb](https://github.com/cocotb/cocotb)
 - [tsfpga](https://gitlab.com/truestream/tsfpga/tree/master)
 - [pyFPGA](https://gitlab.com/rodrigomelo9/pyfpga)
