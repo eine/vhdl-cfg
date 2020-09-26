@@ -1,6 +1,8 @@
 library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+context ieee.ieee_std_context;
+
+library vunit_lib;
+context vunit_lib.vunit_context;
 
 entity tb_leds is
   generic ( runner_cfg : string );
@@ -16,11 +18,10 @@ begin
 
   main: process
   begin
-    procedure run_test is begin
-      info("Init test");
-      wait for clk_period*5000;
-      info("Test done");
-    end loop;
+    test_runner_setup(runner, runner_cfg);
+    info("Init test");
+    wait for clk_period*5000;
+    info("Test done");
     test_runner_cleanup(runner);
     wait;
   end process;
