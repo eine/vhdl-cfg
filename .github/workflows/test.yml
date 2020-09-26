@@ -8,6 +8,7 @@ on:
 
 jobs:
 
+
   GHDLSynth:
     runs-on: ubuntu-latest
     steps:
@@ -33,11 +34,25 @@ jobs:
         name: GHDLSynth_out
         path: synth_out
 
+
   VUnit:
     runs-on: ubuntu-latest
     steps:
 
     - uses: actions/checkout@v2
 
-    - name: VUnit 'demo'
+    - name: VUnit 'demo' (GHDL)
       run: docker run --rm -v $(pwd):/src -w /src -e CI ghdl/vunit:llvm python3 modules/demo/vunit/run.py -v
+
+
+  PyFPGA:
+    runs-on: ubuntu-latest
+    steps:
+
+    - uses: actions/checkout@v2
+
+    - name: Build ghdl/synth:pyfpga image
+      run: docker build -t ghdl/synth:pyfpga - < .github/pyfpga.dockerfile
+
+    - name: PyFPGA 'demo' (Yosys)
+      run: docker run --rm -v $(pwd):/src -w /src -e CI ghdl/synth:pyfpga python3 modules/demo/pyfpga/pyfpga.py
