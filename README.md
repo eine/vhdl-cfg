@@ -11,7 +11,23 @@ This repository is a playground for exploring and comparing how configuration is
   - `uart`: UART sender and receiver, based on [ghdl/ghdl-yosys-plugin: examples/icestick/uart](https://github.com/ghdl/ghdl-yosys-plugin/tree/master/examples/icestick/uart).
 - `GHDLSynth`: naive adaptation of the Makefiles from [ghdl/ghdl-yosys-plugin](https://github.com/ghdl/ghdl-yosys-plugin) to a Python class.
 
+## Tools/Toolchains
+
+The following table shows which tool examples were contributed to this repository already. Some of them are used in some modules only (yet).
+
+|   | demo | leds | full_adder | uart |
+|---|---|---|---|---|
+| GHDLSynth | | Yes *1 | | |
+| [VUnit](https://github.com/VUnit/vunit) | Yes | | | |
+| [pyFPGA](https://gitlab.com/rodrigomelo9/pyfpga) | Yes *2 | | | |
+| | | | | |
+
+- *1 Icestick only
+- *2 Vivado and *generic* Yosys only
+
 ## Target boards and compatible/tested modules
+
+Not all the modules were used in all the boards yet. The following list shows the combinations that are known to work:
 
 - icestick, ice40hx8k
   - `leds/src/leds.vhdl leds/src/$arch` | for arch in blink fixed multi1 multi2 rotate1 rotate2 rotate3 rotate4 spin
@@ -20,17 +36,7 @@ This repository is a playground for exploring and comparing how configuration is
 - ecp5-evn, orange-crab
   - `demo/src/demo.vhd`
 
-## Tools/Toolchains
-
-- [`GHDLSynth`](GHDLSynth/) Python class (GHDL + ghdl-yosys-plugin + Yosys + NextPNR + [icestorm | [trellis + openocd]]) (*natively*, with Docker or Podman)
-- [VUnit](https://github.com/VUnit/vunit)
-  - Used: `demo`
-  - ToDo: `leds`, `full_adder`, `uart`
-- [pyFPGA](https://gitlab.com/rodrigomelo9/pyfpga)
-  - Used: `demo`
-  - ToDO: `leds`, `full_adder`, `uart`
-
-### ToDo
+## ToDo
 
 - [GHDL](https://github.com/ghdl/ghdl)
   - [ghdl-language-server](https://github.com/ghdl/ghdl-language-server)
