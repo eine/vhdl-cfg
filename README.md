@@ -45,6 +45,7 @@ Not all the modules were used in all the boards yet. The following list shows th
 - [rust_hdl](https://github.com/kraigher/rust_hdl)
 - [cocotb](https://github.com/cocotb/cocotb)
 - [tsfpga](https://gitlab.com/truestream/tsfpga/tree/master)
+- [pyIPCMI](https://github.com/Paebbels/pyIPCMI)
 - [fusesoc](https://github.com/olofk/fusesoc) | [FuseSoc Verification Automation](https://github.com/m-kru/fsva)
 - [edalize](https://github.com/olofk/edalize)
 - [hdl-make](https://ohwr.org/projects/hdl-make)
