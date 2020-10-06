@@ -2,15 +2,15 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
---  Led positions in Icestick
+--  Icestick
 --
---  I         D3
+--  I      D3
 --  r
---  D     D2  D5  D4
+--  D  D2  D5  D4
 --  A
---            D1
---
+--         D1
+
 entity leds is
-  port (clk : in std_logic;
-        led1, led2, led3, led4, led5 : out std_logic);
+  port (CLK : in std_logic;
+        LED1, LED2, LED3, LED4, LED5 : out std_logic);
 end leds;

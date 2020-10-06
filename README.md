@@ -2,7 +2,7 @@
 
 This repository is a playground for exploring and comparing how configuration is handled by different tools for development of (V)HDL projects. The main motivation is hopefully finding a universal format/procedure for reducing duplication. The repository is organised as follows:
 
-- `impl`: board constaint files (`*.lpf`, `*.pcf`, etc.), which can be reused by multiple designs.
+- `boards`: board constraint files (`*.lpf`, `*.pcf`, etc.), which can be reused by multiple designs.
 - `prog`: each subdir contains helper resources for a different programming tool, which can be reused by multiple designs.
 - `modules`: each subdir contains a different design and the corresponding specific sources for each of the tested tools.
   - `demo`: basic design with a counter for making a LED blink and an UART loopback (hard-wire), based on [antonblanchard/ghdl-yosys-blink: vhdl_blink.vhdl](https://github.com/antonblanchard/ghdl-yosys-blink).
