@@ -1,6 +1,0 @@
-label: Fomu PVT
-device: UP5K
-doc:
-  - https://github.com/im-tomu/fomu-hardware
-prog:
-  - dfu-util

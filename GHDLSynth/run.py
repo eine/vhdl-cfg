@@ -32,7 +32,7 @@ def build():
         ICE40(
             TOOLS_ICE40,
             Path("/src/synth_out"),
-            Path("/src/boards/icestick/constraints.pcf"),
+            Path("/src/constraints/boards/IceStick/constraints.pcf"),
             val,
             "leds",
             key
