@@ -53,6 +53,7 @@ Not all the modules were used in all the boards yet. The following list shows th
 - [hdl-component-manager](https://github.com/jeremiah-c-leary/hdl-component-manager)
 - [pyVHDLParser](https://github.com/Paebbels/pyVHDLParser)
 - [SigasiProjectCreator](https://github.com/sigasi/SigasiProjectCreator)
+- [cheby](https://gitlab.cern.ch/cohtdrivers/cheby)
 
 ## References
 
